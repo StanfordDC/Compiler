@@ -1,0 +1,9 @@
+C:/Projects/Interpreter/build/CMakeFiles/Experimental.dir
+C:/Projects/Interpreter/build/CMakeFiles/Nightly.dir
+C:/Projects/Interpreter/build/CMakeFiles/Continuous.dir
+C:/Projects/Interpreter/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Projects/Interpreter/build/CMakeFiles/Interpreter.dir
+C:/Projects/Interpreter/build/CMakeFiles/PACKAGE.dir
+C:/Projects/Interpreter/build/CMakeFiles/RUN_TESTS.dir
+C:/Projects/Interpreter/build/CMakeFiles/ALL_BUILD.dir
+C:/Projects/Interpreter/build/CMakeFiles/ZERO_CHECK.dir

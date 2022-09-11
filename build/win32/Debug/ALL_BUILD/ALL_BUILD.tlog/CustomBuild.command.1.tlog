@@ -1,0 +1,10 @@
+^C:\PROJECTS\INTERPRETER\CMAKELISTS.TXT
+setlocal
+"C:\Users\Stanford DC\Downloads\cmake-3.24.1-windows-x86_64\bin\cmake.exe" -SC:/Projects/Interpreter -BC:/Projects/Interpreter/build --check-stamp-file C:/Projects/Interpreter/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
