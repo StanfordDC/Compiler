@@ -1,0 +1,10 @@
+^C:\PROJECTS\INTERPRETER\BUILD\CMAKEFILES\80C9F1F7C08D90E041E146145D920680\GENERATE.STAMP.RULE
+setlocal
+"C:\Users\Stanford DC\Downloads\cmake-3.24.1-windows-x86_64\bin\cmake.exe" -SC:/Projects/Interpreter -BC:/Projects/Interpreter/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Projects/Interpreter/build/Interpreter.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
