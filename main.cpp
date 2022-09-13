@@ -14,4 +14,6 @@ int main(int, char**) {
     };
 
     vector<uint16_t> stack;
+
+    Instruction* currentInstruction = code;
 }
