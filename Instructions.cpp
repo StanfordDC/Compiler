@@ -2,7 +2,9 @@
 
 enum Opcode: uint8_t{
     ADD_INT,
-    PUSH_INT
+    PUSH_INT,
+    PRINT_INT,
+    EXIT
 };
 
 class Instruction{
