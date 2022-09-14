@@ -19,7 +19,7 @@ namespace bytecodeInterpreter{
     }
 
     void ExitInstruction(InterpreterRegisters& registers){
-        
+        registers.currentInstruction = nullptr;
     }
 
     void AddIntInstruction(InterpreterRegisters& registers){
