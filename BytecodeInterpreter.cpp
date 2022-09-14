@@ -2,7 +2,17 @@
 #include <cstdint>
 #include <vector>
 
-struct InterpreterRegisters{
-    vector<uint16_t> stack;
-    Instruction* currentInstruction;
-};
+namespace bytecodeInterpreter{
+
+    using namespace std;
+
+    struct InterpreterRegisters{
+        vector<uint16_t> stack;
+        Instruction* currentInstruction;
+    };
+
+    class BytecodeInterpreter{
+    public:
+        void run(Instruction* code);
+    };
+}
