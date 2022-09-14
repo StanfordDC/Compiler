@@ -23,7 +23,12 @@ namespace bytecodeInterpreter{
     }
 
     void AddIntInstruction(InterpreterRegisters& registers){
-        
+        int16_t rightHandSide = registers.stack.back();
+        registers.stack.pop_back();
+        int16_t leftHandSide = registers.stack.back();
+        registers.stack.pop_back();
+        registers.stack.push_back(leftHandSide + rightHandSide);
+        ++registers.currentInstruction;
     }
 
     void PushIntInstruction(InterpreterRegisters& registers){
