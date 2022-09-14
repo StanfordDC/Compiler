@@ -11,6 +11,10 @@ namespace bytecodeInterpreter{
         Instruction* currentInstruction;
     };
 
+    typedef void (*InstructionFunction) (InterpreterRegisters& registers);
+
+    extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS];
+
     class BytecodeInterpreter{
     public:
         void run(Instruction* code);

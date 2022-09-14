@@ -1,10 +1,11 @@
 #include <cstdint>
 
 enum Opcode: uint8_t{
+    EXIT,
     ADD_INT,
     PUSH_INT,
     PRINT_INT,
-    EXIT
+    NUM_INSTRUCTIONS
 };
 
 class Instruction{
