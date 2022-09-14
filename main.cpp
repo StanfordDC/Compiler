@@ -13,6 +13,4 @@ int main(int, char**) {
         Instruction{ADD_INT, 0, 0},
     };
 
-    InterpreterRegisters registers;
-    registers.currentInstruction = code;
 }
