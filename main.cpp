@@ -4,11 +4,6 @@
 
 using namespace std;
 
-struct InterpreterRegisters{
-    vector<uint16_t> stack;
-    Instruction* currentInstruction;
-};
-
 int main(int, char**) {
     std::cout << "Bytecode interpreter\n";
 
