@@ -1,6 +1,9 @@
 #include "BytecodeInterpreter.h"
+#include <iostream>
 
 namespace bytecodeInterpreter{
+
+    using namespace std;
 
     extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS] = {
         ExitInstruction,
@@ -32,10 +35,14 @@ namespace bytecodeInterpreter{
     }
 
     void PushIntInstruction(InterpreterRegisters& registers){
-        
+        registers.stack.push_back(registers.currentInstruction->p2);
+        ++registers.currentInstruction;
     }
 
     void PrintIntInstruction(InterpreterRegisters& registers){
-        
+         int16_t number = registers.stack.back();
+        registers.stack.pop_back();
+        cout << "Number Printed: " << number << endl;
+        ++registers.currentInstruction;
     }
 }
