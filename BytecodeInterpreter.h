@@ -13,6 +13,14 @@ namespace bytecodeInterpreter{
 
     typedef void (*InstructionFunction) (InterpreterRegisters& registers);
 
+    void ExitInstruction(InterpreterRegisters& registers);
+
+    void AddIntInstruction(InterpreterRegisters& registers);
+
+    void PushIntInstruction(InterpreterRegisters& registers);
+
+    void PrintIntInstruction(InterpreterRegisters& registers);
+    
     extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS];
 
     class BytecodeInterpreter{
