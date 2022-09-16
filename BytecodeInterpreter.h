@@ -11,6 +11,7 @@ namespace bytecodeInterpreter{
         Instruction* currentInstruction;
     };
 
+    //comment
     typedef void (*InstructionFunction) (InterpreterRegisters& registers);
 
     void ExitInstruction(InterpreterRegisters& registers);
