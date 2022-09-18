@@ -12,6 +12,7 @@ namespace bytecodeInterpreter{
         PrintIntInstruction
     };
 
+    //Run the entire instructions
     void BytecodeInterpreter::run(Instruction* code){
         InterpreterRegisters registers;
         registers.currentInstruction = code;
@@ -21,10 +22,12 @@ namespace bytecodeInterpreter{
         }
     }
 
+    //Exit the loop
     void ExitInstruction(InterpreterRegisters& registers){
         registers.currentInstruction = nullptr;
     }
 
+    //Add integer
     void AddIntInstruction(InterpreterRegisters& registers){
         int16_t rightHandSide = registers.stack.back();
         registers.stack.pop_back();
@@ -34,11 +37,13 @@ namespace bytecodeInterpreter{
         ++registers.currentInstruction;
     }
 
+    //Push integer
     void PushIntInstruction(InterpreterRegisters& registers){
         registers.stack.push_back(registers.currentInstruction->p2);
         ++registers.currentInstruction;
     }
 
+    //Print result
     void PrintIntInstruction(InterpreterRegisters& registers){
          int16_t number = registers.stack.back();
         registers.stack.pop_back();
