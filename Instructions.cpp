@@ -5,6 +5,7 @@ enum Opcode: uint8_t{
     ADD_INT,
     PUSH_INT,
     PRINT_INT,
+    COMP_INT_LT,
     NUM_INSTRUCTIONS
 };
 
