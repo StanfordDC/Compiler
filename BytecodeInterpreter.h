@@ -25,6 +25,6 @@ namespace bytecodeInterpreter{
 
     class BytecodeInterpreter{
     public:
-        void run(Instruction* code);
+        static void run(Instruction* code);
     };
 }
