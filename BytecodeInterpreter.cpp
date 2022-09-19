@@ -109,4 +109,13 @@ namespace bytecodeInterpreter{
         registers.stack.pop_back();
         ++registers.currentInstruction;
     }
+
+     //Call function
+    void CallInstruction(InterpreterRegisters &registers) {
+        registers.stack.push_back(int16_t(registers.baseIndex)); // DANGER! Saved base pointer is limited to 16 bits signed!
+        registers.returnAddressStack.push_back(registers.currentInstruction + 1);
+        registers.baseIndex = registers.stack.size();
+        registers.currentInstruction += registers.currentInstruction->p2;
+    }
+
 }
