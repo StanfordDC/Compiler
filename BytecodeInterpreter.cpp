@@ -96,4 +96,17 @@ namespace bytecodeInterpreter{
     void JumpByInstruction(InterpreterRegisters& registers) {
         registers.currentInstruction += registers.currentInstruction->p2;
     }
+
+     //Load int base pointer relative
+    void LoadIntBasepointerRelativeInstruction(InterpreterRegisters &registers) {
+        registers.stack.push_back(registers.stack[registers.currentInstruction->p2 + registers.baseIndex]);
+        ++registers.currentInstruction;
+    }
+
+    //Store int base pointer relative
+    void StoreIntBasepointerRelativeInstruction(InterpreterRegisters &registers) {
+        registers.stack[registers.currentInstruction->p2 + registers.baseIndex] = registers.stack.back();
+        registers.stack.pop_back();
+        ++registers.currentInstruction;
+    }
 }
