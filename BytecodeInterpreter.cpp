@@ -68,4 +68,11 @@ namespace bytecodeInterpreter{
         registers.stack.push_back(registers.stack[registers.currentInstruction->p2]);
         ++registers.currentInstruction;
     }
+
+    //Store integers
+    void StoreIntInstruction(InterpreterRegisters& registers) {
+        registers.stack[registers.currentInstruction->p2] = registers.stack.back();
+        registers.stack.pop_back();
+        ++registers.currentInstruction;
+    }
 }
