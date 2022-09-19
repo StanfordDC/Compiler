@@ -22,6 +22,8 @@ namespace bytecodeInterpreter{
     void PrintIntInstruction(InterpreterRegisters& registers);
 
     void CompareIntLessThanInstruction(InterpreterRegisters& registers);
+
+    void LoadInstruction(InterpreterRegisters& registers);
     
     extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS];
 

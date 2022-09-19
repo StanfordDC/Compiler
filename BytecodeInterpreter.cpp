@@ -62,4 +62,10 @@ namespace bytecodeInterpreter{
 
         ++registers.currentInstruction;
     }
+
+    //Load integers
+    void LoadIntInstruction(InterpreterRegisters& registers) {
+        registers.stack.push_back(registers.stack[registers.currentInstruction->p2]);
+        ++registers.currentInstruction;
+    }
 }
