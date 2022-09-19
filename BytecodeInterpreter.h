@@ -7,8 +7,9 @@ namespace bytecodeInterpreter{
     using namespace std;
 
     struct InterpreterRegisters{
-        vector<uint16_t> stack;
+        vector<int16_t> stack;
         Instruction* currentInstruction;
+        size_t baseIndex;
     };
 
     typedef void (*InstructionFunction) (InterpreterRegisters& registers);
@@ -28,7 +29,7 @@ namespace bytecodeInterpreter{
     void StoreIntInstruction(InterpreterRegisters& registers);
 
     void JumpByIfZeroInstruction(InterpreterRegisters& registers);
-    
+
     void JumpByInstruction(InterpreterRegisters& registers);
     
     extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS];
