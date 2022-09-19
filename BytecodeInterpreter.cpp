@@ -118,4 +118,13 @@ namespace bytecodeInterpreter{
         registers.currentInstruction += registers.currentInstruction->p2;
     }
 
+     //Return function
+    void ReturnInstruction(InterpreterRegisters &registers) {
+        Instruction * returnAddress = registers.returnAddressStack.back();
+        registers.returnAddressStack.pop_back();
+        registers.baseIndex = registers.stack.back();
+        registers.stack.pop_back();
+        registers.currentInstruction = returnAddress;
+    }
+
 }

@@ -38,6 +38,8 @@ namespace bytecodeInterpreter{
     void StoreIntBasepointerRelativeInstruction(InterpreterRegisters& registers);
 
     void CallInstruction(InterpreterRegisters& registers);
+
+    void ReturnInstruction(InterpreterRegisters& registers);
     
     extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS];
 
