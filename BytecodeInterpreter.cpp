@@ -50,4 +50,16 @@ namespace bytecodeInterpreter{
         cout << "Number Printed: " << number << endl;
         ++registers.currentInstruction;
     }
+
+    //Compare integers
+    void CompareIntLessThanInstruction(InterpreterRegisters& registers) {
+        int16_t rightHandSide = registers.stack.back();
+        registers.stack.pop_back();
+        int16_t leftHandSide = registers.stack.back();
+        registers.stack.pop_back();
+
+        registers.stack.push_back(leftHandSide < rightHandSide);
+
+        ++registers.currentInstruction;
+    }
 }
