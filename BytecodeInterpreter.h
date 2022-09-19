@@ -26,6 +26,10 @@ namespace bytecodeInterpreter{
     void LoadIntInstruction(InterpreterRegisters& registers);
 
     void StoreIntInstruction(InterpreterRegisters& registers);
+
+    void JumpByIfZeroInstruction(InterpreterRegisters& registers);
+    
+    void JumpByInstruction(InterpreterRegisters& registers);
     
     extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS];
 

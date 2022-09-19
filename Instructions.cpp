@@ -8,6 +8,8 @@ enum Opcode: uint8_t{
     COMP_INT_LT,
     LOAD_INT,
     STORE_INT,
+    JUMP_BY_IF_ZERO,
+    JUMP_BY,
     NUM_INSTRUCTIONS
 };
 

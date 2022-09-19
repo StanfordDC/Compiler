@@ -75,4 +75,20 @@ namespace bytecodeInterpreter{
         registers.stack.pop_back();
         ++registers.currentInstruction;
     }
+
+    //Jump by if zero
+    void JumpByIfZeroInstruction(InterpreterRegisters& registers) {
+        int16_t condition = registers.stack.back();
+        registers.stack.pop_back();
+        if (condition == 0) {
+            registers.currentInstruction += registers.currentInstruction->p2;
+        } else {
+            ++registers.currentInstruction; // no-op.
+        }
+    }
+
+    //Jump by
+    void JumpByInstruction(InterpreterRegisters& registers) {
+        registers.currentInstruction += registers.currentInstruction->p2;
+    }
 }
