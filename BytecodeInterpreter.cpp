@@ -5,12 +5,7 @@ namespace bytecodeInterpreter{
 
     using namespace std;
 
-    extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS] = {
-        ExitInstruction,
-        AddIntInstruction,
-        PushIntInstruction,
-        PrintIntInstruction
-    };
+    extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS];
 
     //Run the entire instructions
     void BytecodeInterpreter::run(Instruction* code){
