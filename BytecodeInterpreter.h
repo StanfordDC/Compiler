@@ -45,6 +45,6 @@ namespace bytecodeInterpreter{
 
     class BytecodeInterpreter{
     public:
-        static void run(Instruction* code);
+        static void run(Instruction* code, vector<int16_t> arguments, int16_t* result = nullptr);
     };
 }

@@ -21,16 +21,33 @@ namespace bytecodeInterpreter{
         ReturnInstruction,
     };
 
-    //Run the entire instructions
-    void BytecodeInterpreter::run(Instruction* code){
+    /*static*/ void BytecodeInterpreter::run(Instruction* code, vector<int16_t> arguments, int16_t* result) {
         InterpreterRegisters registers;
         registers.currentInstruction = code;
 
-        while(registers.currentInstruction != nullptr){
+        if (result) {
+            registers.stack.push_back(0);
+        }
+        registers.stack.insert(registers.stack.end(), arguments.begin(), arguments.end());
+
+        registers.stack.push_back(0); // push old baseIndex.
+        registers.returnAddressStack.push_back(nullptr);
+        registers.baseIndex = registers.stack.size();
+
+        while (registers.currentInstruction != nullptr) {
             gInstructionFunctions[registers.currentInstruction->opcode](registers);
         }
-    }
 
+        size_t numArgs = arguments.size();
+        while( numArgs-- ) {
+            registers.stack.pop_back();
+        }
+
+        if (result) {
+            *result = registers.stack[0];
+        }
+    }
+    
     //Exit the loop
     void ExitInstruction(InterpreterRegisters& registers){
         registers.currentInstruction = nullptr;
