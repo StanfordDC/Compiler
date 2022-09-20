@@ -6,7 +6,7 @@ namespace bytecodeInterpreter{
     using namespace std;
 
     extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS] = {
-         ExitInstruction,
+        ExitInstruction,
         AddIntInstruction,
         PushIntInstruction,
         PrintIntInstruction,
