@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -14,6 +15,8 @@ enum TokenType{
 
 class Token{
 public:
+    enum TokenType type;
+    string text;
 };
 
 class Tokenizer{
