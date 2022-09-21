@@ -6,9 +6,9 @@ using namespace std;
 
 class Token{
 public:
-}
+};
 
 class Tokenizer{
 public:
-    vector<>
+    vector<Token> list;
 };
