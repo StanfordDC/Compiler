@@ -17,11 +17,11 @@ enum TokenType{
 
 class Token{
 public:
-    enum TokenType type;
-    string text;
-    size_t mStartOffset;
-    size_t mEndOFFset;
-    size_t mLineNumber;
+     enum TokenType mType{WHITESPACE};
+    string mText;
+    size_t mLineNumber{0};
+    size_t mEndOFFset{0};
+    size_t mLineNumber{0};
 };
 
 class Tokenizer{
