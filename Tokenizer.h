@@ -15,9 +15,10 @@ enum TokenType{
 
 class Token{
 public:
-
     enum TokenType type;
     string text;
+    size_t mStartOffset;
+    size_t mEndOFFset;
 };
 
 class Tokenizer{
