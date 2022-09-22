@@ -24,5 +24,5 @@ public:
 
 class Tokenizer{
 public:
-    vector<Token> list;
+    vector<Token> parse(const string &inProgram);
 };
