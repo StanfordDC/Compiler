@@ -13,14 +13,16 @@ enum TokenType{
     STRING_LITERAL,
     OPERATOR,
     STRING_ESCAPE_SEQUENCE,
+    STRING_ESCAPE_SEQUENCE,
+    POTENTIAL_DOUBLE,
+    POTENTIAL_COMMENT,
+    COMMENT
 };
 
 class Token{
 public:
      enum TokenType mType{WHITESPACE};
     string mText;
-    size_t mLineNumber{0};
-    size_t mEndOFFset{0};
     size_t mLineNumber{0};
 };
 
