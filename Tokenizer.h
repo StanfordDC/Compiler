@@ -19,6 +19,7 @@ public:
     string text;
     size_t mStartOffset;
     size_t mEndOFFset;
+    size_t mLineNumber;
 };
 
 class Tokenizer{
