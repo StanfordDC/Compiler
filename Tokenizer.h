@@ -6,11 +6,13 @@
 using namespace std;
 
 enum TokenType{
-    WHITESPACE,
+    WHITESPACE, // No token ever has this type.
     IDENTIFIER,
     INTEGER_LITERAL,
+    DOUBLE_LITERAL,
     STRING_LITERAL,
-    OPERATOR
+    OPERATOR,
+    STRING_ESCAPE_SEQUENCE,
 };
 
 class Token{
