@@ -15,7 +15,7 @@ enum TokenType{
 
 class Token{
 public:
-//comment
+
     enum TokenType type;
     string text;
 };
