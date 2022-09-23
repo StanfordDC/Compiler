@@ -26,6 +26,8 @@ namespace simpleparser{
         enum TokenType mType{WHITESPACE};
         string mText;
         size_t mLineNumber{0};
+
+        void debugPrint() const;
     };
 
     class Tokenizer{
