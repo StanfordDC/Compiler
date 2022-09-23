@@ -183,7 +183,6 @@ namespace simpleparser {
         token.mText.erase();
     }
 
-    //comment
     void Token::debugPrint() const {
         cout << "Token(" << sTokenTypeStrings[mType] << ", \"" << mText << "\", " << mLineNumber << ")" << endl;
     }
