@@ -31,5 +31,8 @@ namespace simpleparser{
     class Tokenizer{
     public:
         vector<Token> parse(const string &inProgram);
+    
+    private:
+        void endToken(Token &token, vector<Token> &tokens);
     };
 }

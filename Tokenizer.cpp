@@ -165,4 +165,21 @@ namespace simpleparser {
 
         return tokens;
     }
+
+    void Tokenizer::endToken(Token &token, vector<Token> &tokens) {
+        if (token.mType == COMMENT) {
+            cout << "Ignoring comment " << token.mText << endl;
+        } else if (token.mType != WHITESPACE) {
+            tokens.push_back(token);
+        }
+        if (token.mType == POTENTIAL_DOUBLE) {
+            if (token.mText.compare(".") == 0) {
+                token.mType = OPERATOR;
+            } else {
+                token.mType = DOUBLE_LITERAL;
+            }
+        }
+        token.mType = WHITESPACE;
+        token.mText.erase();
+    }
 }
