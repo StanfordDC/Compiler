@@ -1,7 +1,9 @@
 #pragma once
 
 #include "Tokenizer.h"
-
+#include "Type.h"
+#include "FunctionDefinition.h"
+#include "Statement.h"
 #include <optional>
 #include <string>
 #include <map>
