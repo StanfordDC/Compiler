@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <vector>
 
-namespace bytecodeInterpreter{
+namespace interpreter{
 
     using namespace std;
 
@@ -43,7 +43,7 @@ namespace bytecodeInterpreter{
     
     extern InstructionFunction gInstructionFunctions[NUM_INSTRUCTIONS];
 
-    class BytecodeInterpreter{
+    class Interpreter{
     public:
         static void run(Instruction* code, vector<int16_t> arguments, int16_t* result = nullptr);
     };

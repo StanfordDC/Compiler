@@ -1,7 +1,7 @@
-#include "BytecodeInterpreter.h"
+#include "Interpreter.h"
 #include <iostream>
 
-namespace bytecodeInterpreter{
+namespace interpreter{
 
     using namespace std;
 
@@ -21,7 +21,7 @@ namespace bytecodeInterpreter{
         ReturnInstruction,
     };
 
-    /*static*/ void BytecodeInterpreter::run(Instruction* code, vector<int16_t> arguments, int16_t* result) {
+    /*static*/ void Interpreter::run(Instruction* code, vector<int16_t> arguments, int16_t* result) {
         InterpreterRegisters registers;
         registers.currentInstruction = code;
 
