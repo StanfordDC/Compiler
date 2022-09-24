@@ -21,7 +21,7 @@ namespace simpleparser {
 
         map<string, FunctionDefinition> GetFunctions() const { return mFunctions; }
 
-    private:
+     private:
         optional<Type> expectType();
 
         //! Empty string means match any identifier.
@@ -36,6 +36,23 @@ namespace simpleparser {
         vector<Token>::iterator mEndToken;
         map<string, Type> mTypes;
         map<string, FunctionDefinition> mFunctions;
-    
+
+        optional<vector<Statement>> parseFunctionBody();
+
+        optional<Statement> expectOneValue();
+
+        optional<Statement> expectWhileLoop();
+
+        optional<Statement> expectStatement();
+
+        optional<Statement> expectVariableDeclaration();
+
+        optional<Statement> expectFunctionCall();
+
+        optional <Statement> expectExpression();
+
+        size_t operatorPrecedence(const string &operatorName);
+
+        Statement *findRightmostStatement(Statement *lhs, size_t rhsPrecedence);
     };
 }
