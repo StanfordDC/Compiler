@@ -34,6 +34,26 @@ This compiler project is divided into three main components: `Tokenizer`, `Parse
     ADD  | ADD_INT (Only integers)
     JMP  |  JUMP_BY
     JNZ  | JUMP_BY_IF_ZERO
+    
+ - Other available bytecode is available in `Instructions.h` 
+   ````
+   enum Opcode: uint8_t{
+        EXIT,
+        ADD_INT,
+        PUSH_INT,
+        PRINT_INT,
+        COMP_INT_LT,
+        LOAD_INT,
+        STORE_INT,
+        JUMP_BY_IF_ZERO,
+        JUMP_BY,
+        LOAD_INT_BASEPOINTER_RELATIVE,
+        STORE_INT_BASEPOINTER_RELATIVE,
+        CALL,
+        RETURN,
+        NUM_INSTRUCTIONS
+   };
+   ````
  
   
 
