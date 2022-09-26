@@ -15,4 +15,8 @@ The first step in compiling programming language is called tokenization.
 
 The tokenizer reads human written code file line by line, character by character and breaks each term down into **lexeme**. For each lexeme, a type is attached to it indicating what kind of lexeme it is, and a lexeme with a type is called a **token**.
 
-The process of tagging lexeme is known as ***Lexical Analysis*** and is performed using [Deterministic Finite Automata](https://en.wikipedia.org/wiki/Deterministic_finite_automaton)
+The process of generating tokens is known as ***Lexical Analysis*** and is performed using [Deterministic Finite Automata](https://en.wikipedia.org/wiki/Deterministic_finite_automaton)
+
+### Parser
+
+### Interpreter
