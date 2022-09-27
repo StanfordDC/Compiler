@@ -26,7 +26,7 @@ In parser, there are several phases to parse a token: ***Syntatic Analysis***, *
   Parser takes input stream of tokens from tokenizer and checks for syntax correctness to form a parse tree using **Top-down Recursive Descent** parsing technique
 
 * #### Semantic Analysis
-  Evaluates the parse tree from the previous phase while checking for semantic errors such as **type mismatch** (initializing a value to a variable that doesn't match its data type) and **reserved identifier misuse** (reserved kewywords are used inappropriately)
+  Evaluates the parse tree from the previous phase while checking for semantic errors such as **type mismatch** (initializing a value to a variable that doesn't match its data type) and **reserved identifier misuse** (reserved keywords are used inappropriately)
 
 * #### Bytecode Generation (Pending)
 
