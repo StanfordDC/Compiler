@@ -26,8 +26,7 @@ In parser, there are several phases to parse a token: ***Syntatic Analysis***, *
   Parser takes input stream of tokens from tokenizer and checks for syntax correctness to form a **parse tree/abstract syntax tree** using **Top-down Recursive Descent** parsing technique
   
   Illustration
-![lexer-parser-center](https://user-images.githubusercontent.com/69248457/192459457-9d013781-38e0-4891-b89f-8beee8bf626d.png)
-
+![lexer-parser-center](https://user-images.githubusercontent.com/69248457/192462398-124a7d1e-800c-4254-8841-91232de84954.png)
 
 * #### Semantic Analysis
   Evaluates the parse tree from the previous phase while checking for semantic errors such as **type mismatch** (initializing a value to a variable that doesn't match its data type) and **reserved identifier misuse** (reserved keywords are used inappropriately)
