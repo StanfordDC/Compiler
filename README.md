@@ -23,7 +23,11 @@ This compiler project is divided into three main components: `Tokenizer`, `Parse
 In parser, there are several phases to parse a token: ***Syntatic Analysis***, ***Semantic Analysis***, and ***Bytecode Generation***
 
 * #### Syntatic Analysis
-  Parser takes input stream of tokens from tokenizer and checks for syntax correctness to form a parse tree using **Top-down Recursive Descent** parsing technique
+  Parser takes input stream of tokens from tokenizer and checks for syntax correctness to form a **parse tree/abstract syntax tree** using **Top-down Recursive Descent** parsing technique
+  
+  Illustration
+![lexer-parser-center](https://user-images.githubusercontent.com/69248457/192459457-9d013781-38e0-4891-b89f-8beee8bf626d.png)
+
 
 * #### Semantic Analysis
   Evaluates the parse tree from the previous phase while checking for semantic errors such as **type mismatch** (initializing a value to a variable that doesn't match its data type) and **reserved identifier misuse** (reserved keywords are used inappropriately)
